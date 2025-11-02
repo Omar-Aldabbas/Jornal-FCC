@@ -1,26 +1,27 @@
 import Marker from "../assets/marker.png"
 
-export default function Entry({entry}) {
+export default function Entry(props) {
+    console.log(props)
     return (
         <article className="journal-entry">
             <div className="main-image-container">
                 <img 
                     className="main-image"
-                    src={entry.img.src} 
-                    alt={entry.img.alt}
+                    src={props.img.src} 
+                    alt={props.img.alt}
                 />
             </div>
             <div className="info-container">
                 <img 
                     className="marker"
-                    src={Marker} 
+                    // src={Marker} 
                     alt="map marker icon"
                 />
-                <span className="country">{entry.country}</span>
-                <a href={entry.googleMapsLink} target="_blank">View on Google Maps</a>
-                <h2 className="entry-title">{entry.title}</h2>
-                <p className="trip-dates">{entry.dates}</p>
-                <p className="entry-text">{entry.text}</p>
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
             </div>
             
         </article>

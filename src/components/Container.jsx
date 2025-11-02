@@ -11,7 +11,9 @@ export const Container = () => {
       // googleMapsLink={item.googleMapsLink}
       // dates={item.dates}
       // text={item.text}
-      entry={item}
+
+      // entry={item}
+      {...item}
     />
   ));
 
