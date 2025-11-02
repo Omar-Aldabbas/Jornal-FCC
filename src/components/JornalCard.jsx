@@ -1,33 +1,28 @@
-import { MapPin } from "lucide-react";
+import Marker from "../assets/marker.png"
 
-export const JornalCard = ({ img, name, location, link, date, text }) => {
-  return (
-    <article className="journal-entry">
-      {/* Image */}
-      <div className="main-image-container">
-        <img src={img} alt={location} className="main-img" />
-      </div>
-
-      {/* Info */}
-      <div className="info-container">
-        <div className="upper-info">
-          <span className="country">
-            <MapPin color="red" />
-            {name.toUpperCase()}
-          </span>
-          <a href={link} title={`See the beauty of ${name}`} target="_blank" rel="noopener noreferrer">
-            View in Google Maps
-          </a>
-        </div>
-
-        {/* Title */}
-        <h2 className="entry-title">{location}</h2>
-
-        <div className="trip-info">
-          <p className="trip-dates">{date}</p>
-          <p className="entry-text">{text}</p>
-        </div>
-      </div>
-    </article>
-  );
-};
+export default function Entry(props) {
+    return (
+        <article className="journal-entry">
+            <div className="main-image-container">
+                <img 
+                    className="main-image"
+                    src={props.img.src} 
+                    alt={props.img.alt}
+                />
+            </div>
+            <div className="info-container">
+                <img 
+                    className="marker"
+                    src={Marker} 
+                    alt="map marker icon"
+                />
+                <span className="country">{props.country}</span>
+                <a href={props.googleMapsLink} target="_blank">View on Google Maps</a>
+                <h2 className="entry-title">{props.title}</h2>
+                <p className="trip-dates">{props.dates}</p>
+                <p className="entry-text">{props.text}</p>
+            </div>
+            
+        </article>
+    )
+}

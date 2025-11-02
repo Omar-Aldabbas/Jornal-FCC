@@ -1,20 +1,20 @@
-import { journalData } from "./Data";
-import { JornalCard } from "./JornalCard";
+import journalData from "./Data";
+import Entry from "./JornalCard";
 
 export const Container = () => {
-  return (
-    <div className="jornal-items">
-      {journalData.map((item, _) => (
-        <JornalCard
-            key={item.id}
-          img={item.img}
-          name={item.name}
-          location={item.location}
-          link={item.link}
-          date={item.date}
-          text={item.text}
-        />
-      ))}
-    </div>
-  );
+  const jornals = journalData.map((item, _) => (
+    <Entry
+      key={item.id}
+      img={item.img}
+      title={item.title}
+      country={item.country}
+      googleMapsLink={item.googleMapsLink}
+      dates={item.dates}
+      text={item.text}
+    />
+  ));
+
+  return <div className="jornal-items">
+    {jornals}
+  </div>;
 };

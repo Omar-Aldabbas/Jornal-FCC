@@ -1,90 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 1rem;
-  font-size: 16px;
-  /* color: aliceblue;/ */
+html, body {
+    margin: 0;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background: rgb(253, 50, 50);
-  color: white;
-  border-radius: 1rem 1rem 0.3rem 0.3rem;
-  padding: 0.5rem;
+body {
+    font-family: Inter;
+    /* padding: 5px; */
 }
 
 .container {
-  margin: 45px 40px;
+    margin: 45px 40px;
+}
+
+header {
+    background: #F55A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 55px;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 1rem;
+}
+
+header > img {
+    width: 24px;
+    margin-right: 7px;
 }
 
 header > h1 {
-  font-size: 1.5rem;
-  font-weight: 900;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 article.journal-entry {
-  display: flex;
+    display: flex;
+    margin-bottom: 36px;
+}
+
+article.journal-entry .marker {
+    width: 7px;
+    margin-right: 4px;
 }
 
 article.journal-entry .main-image-container {
-  width: 200px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 5px;
-  flex-shrink: 0;
-  margin-right: 19px;
+    width: 125px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 19px;
 }
 
-article.journal-entry .main-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center; /* correct for img, not background-position */
+article.journal-entry .main-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .info-container span.country {
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-right: 12px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 12px;
 }
 
 .info-container a {
-  color: #2b283a;
-  font-size: 0.7rem;
+    color: #2B283A;
+    font-size: 0.7rem;
 }
 
 .info-container a:visited {
-  color: #918e9b;
+    color: #918E9B;
 }
 
 .info-container h2.entry-title {
-  margin-top: 7px;
-  margin-bottom: 17px;
+    margin-top: 7px;
+    margin-bottom: 17px;
 }
 
 .info-container p.trip-dates {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .info-container p.entry-text {
-  line-height: 1.5;
-  font-size: 0.8rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.jornal-items {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
